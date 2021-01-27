@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EmployeeApplication
 {
-    class Program
+    class Mainclass
     {
         static void Main(string[] args)
         {
@@ -38,9 +38,8 @@ namespace EmployeeApplication
 
             //3.
             Console.WriteLine("The current size of the collection is {0}", EmployeeNames.Capacity);
-            EmployeeNames = EmployeeNames.Select(t => t.Trim()).ToList();
-            
-            Console.WriteLine("The size after removing the extra space is  {0}", EmployeeNames.Count);
+            EmployeeNames.TrimExcess();                             //trim the excess space
+            Console.WriteLine("The size after removing the extra space is  {0}", EmployeeNames.Capacity);
 
 
 
